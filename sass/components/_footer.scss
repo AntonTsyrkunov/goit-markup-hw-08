@@ -1,6 +1,6 @@
 .footer {
     background-color: $hero-background-color;
-    display: flex;
+    // display: flex;
     padding-top: 60px;
     padding-bottom: 60px;
 
@@ -10,11 +10,14 @@
 }
 
 .info {
-    display: flex;
-    align-items: baseline;
+    // display: flex;
+    // align-items: baseline;
+    text-align: center;
 
     &__adress{
-        padding-left: 0px;        
+        padding-left: 0px;
+        margin-bottom: 60px;
+                
     }
 
     &__item:not(:last-child) {
@@ -43,6 +46,8 @@
     &--bottom{
     display: inline-block;
     margin-bottom:20px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
     &--below{
@@ -60,7 +65,8 @@
 }
 
 .footer-social{
-    margin-left: 70px;
+    // margin-left: 70px;
+    margin-bottom: 60px;
 
     &__caption{
         color: $main-body-color;
