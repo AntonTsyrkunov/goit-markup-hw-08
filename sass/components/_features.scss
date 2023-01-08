@@ -23,11 +23,17 @@
 }
 
 .features {
-    // display: flex;
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0px;
-    // gap: 30px;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;  
+
+    }
+    
 
     &__pic{
         width: 70px;
@@ -42,7 +48,11 @@
         height: 120px;
         background-color: $filter-button-bckground;
         border-radius: 4px;   
-        margin-bottom: 30px;     
+        margin-bottom: 30px; 
+        
+        @media screen and (min-width: 768px) {
+            width: 354px;      
+        }
     }
 
     &__caption {
@@ -71,4 +81,8 @@
     bottom: 30px;                
     margin-right:auto;
     margin-left: auto;
+
+    @media screen and (min-width: 768px) {
+        width: 354px;    
+    }
 }

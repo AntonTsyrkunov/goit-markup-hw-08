@@ -27,9 +27,9 @@ ul {
   margin-right: auto;
   width: 480px;
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 768px) {
   .container {
-    width: 1200px;
+    width: 768px;
   }
 }
 
@@ -161,7 +161,7 @@ header {
     gap: 10px;
   }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .adress {
     flex-direction: row;
     gap: 50px;
@@ -293,6 +293,13 @@ header {
   margin-bottom: 0;
   padding-left: 0px;
 }
+@media screen and (min-width: 768px) {
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
 .features__pic {
   width: 70px;
   height: 70px;
@@ -306,6 +313,11 @@ header {
   background-color: #F5F4FA;
   border-radius: 4px;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .features__background {
+    width: 354px;
+  }
 }
 .features__caption {
   font-weight: 700;
@@ -331,6 +343,11 @@ header {
   margin-right: auto;
   margin-left: auto;
 }
+@media screen and (min-width: 768px) {
+  .features-item {
+    width: 354px;
+  }
+}
 
 .section--hero {
   width: 480px;
@@ -354,6 +371,11 @@ header {
     height: 400px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero768.jpg);
     background-size: 768px 400px;
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .section--hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero768@2x.jpg);
   }
 }
 
@@ -437,15 +459,31 @@ header {
   margin-right: auto;
   margin-left: auto;
 }
+@media screen and (min-width: 768px) {
+  .section--team {
+    width: 768px;
+  }
+}
 
 .team {
   margin: 0;
   margin-right: auto;
   margin-left: auto;
 }
+.team .section__heading {
+  margin-bottom: 30px;
+}
 
 .members {
   padding-left: 0;
+}
+@media screen and (min-width: 768px) {
+  .members {
+    width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .member {
@@ -456,6 +494,12 @@ header {
   display: block;
   width: 450px;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .member {
+    width: 354px;
+    margin-bottom: 0;
+  }
 }
 .member__pic {
   display: block;
@@ -527,6 +571,11 @@ header {
   border-radius: 4px;
   fill: #AFB1B8;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .client__link {
+    width: 226px;
+  }
 }
 .client__link:hover {
   border-color: #2196F3;
@@ -626,7 +675,7 @@ header {
 }
 .footer-form__input {
   margin-top: 20px;
-  max-width: 100%;
+  width: 450px;
   height: 50px;
   padding: 15px 16px;
   background-color: #2F303A;
@@ -667,9 +716,16 @@ header {
 
 .selections {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  width: 400px;
   padding-left: 0;
   gap: 8px;
+}
+@media screen and (min-width: 768px) {
+  .selections {
+    width: 768px;
+    justify-content: center;
+  }
 }
 
 .products {
@@ -677,16 +733,27 @@ header {
   flex-wrap: wrap;
   margin-top: 32px;
   padding-left: 0px;
-  width: 370;
   gap: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .products {
+    width: 768px;
+  }
 }
 
 .product {
-  width: 370px;
+  width: 450px;
 }
 .product__link {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
+}
+@media screen and (min-width: 768px) {
+  .product {
+    width: 354px;
+  }
 }
 .product__link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -713,6 +780,8 @@ header {
 }
 .product .product__img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 .product__outline {
   padding-top: 20px;
@@ -753,7 +822,7 @@ header {
 }
 
 .filter-button {
-  background-color: var(--filter-button-bckground);
+  background-color: #F5F4FA;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62em;

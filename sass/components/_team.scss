@@ -3,20 +3,36 @@
     width: 480px;
     margin-right: auto;
     margin-left: auto;
+
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
 }
 
 .team {
     margin: 0;
     margin-right: auto;
     margin-left: auto;
+
+    .section__heading {
+        margin-bottom: 30px
+    }
 }
 
 .members {
-    // display:flex;
-    // margin-top: 50px;
     padding-left: 0;
-    // gap: 30px;
+
+    
+    @media screen and (min-width: 768px) {
+        width: 768px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+               
+    
+    }
 }
+
 
 
 .member {
@@ -29,12 +45,18 @@
     width: 450px; 
     margin-bottom: 30px;  
 
+    @media screen and (min-width: 768px) {
+        width: 354px;
+        margin-bottom: 0;
+    }
+
     &__pic {
         display: block;
         width: 100%;
         height: auto;
-    }
 
+    } 
+    
     &__data {
         padding-top: 30px;
     }
