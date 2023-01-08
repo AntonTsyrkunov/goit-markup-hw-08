@@ -1,6 +1,10 @@
 header {    
     border-bottom: 1px solid $header-bottom-line;    
-    width: 100%;
+    width: 480px;
+
+    @media screen and (min-width: 481px) {
+        width: 100%;
+    }
 
 }
 
