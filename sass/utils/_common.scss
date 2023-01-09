@@ -18,6 +18,29 @@ ul {
 .section {
     padding-top: 60px;
     padding-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @media screen and (min-width: 768px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+
+    &__heading {
+        margin-top:0;
+        margin-bottom:0;
+        text-align: center;
+        color: $main-font-color;
+        font-weight: $bold-weight;
+        font-size: 36px;
+        line-height: 1.16em;   
+        letter-spacing: 0.03em;
+    }
 }
 
 .container{
@@ -32,10 +55,10 @@ ul {
         width: 768px;     
     }
 
-    // @media screen and (min-width: 1200px){
+    @media screen and (min-width: 1200px){
         
-    //     width: 1200px;
-    // } 
+        width: 1200px;
+    } 
 
 }
     

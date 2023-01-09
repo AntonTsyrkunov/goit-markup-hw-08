@@ -3,11 +3,11 @@
         height: 400px; 
         padding-top: 0;
         padding-bottom: 0;
-        margin-left: auto;
-        margin-right: auto;
         background-image: linear-gradient(to right, $hero-gradient, $hero-gradient), url(../../images/hero1x.jpg);
         background-color: $hero-background-color;
         background-size: 480px 400px;
+        margin-left: auto;
+        margin-right: auto;
         
         @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
             background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),url(../../images/hero@2x.jpg);
@@ -23,6 +23,18 @@
                 background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),url(../../images/hero768@2x.jpg);
             }
         }
+
+        @media screen and (min-width: 1200px) {
+            width: 1600px;
+            height: 600px;
+            background-image: linear-gradient(to right, $hero-gradient, $hero-gradient), url(../../images/hero1200@1x.jpg);
+            background-size: 1600px 600px;   
+            
+            @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),url(../../images/hero1200@2x.jpg);
+            }
+
+        }
     }
 
 
@@ -31,7 +43,15 @@
 .hero{   
     margin-top:0; 
     text-align: center;
-    padding-top: 118px;
+    padding-top: 118px;    
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        height: 600px;
+    }
 
     &__heading {
         text-align: center;
@@ -45,7 +65,14 @@
         text-transform: uppercase;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+        
+        @media screen and (min-width: 1200px) {
+        
+            font-size: 44px;
+            line-height: 1.36em;
+            width: 696px;
+        }
     }
 
     &__button { 

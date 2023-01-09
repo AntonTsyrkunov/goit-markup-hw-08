@@ -101,7 +101,11 @@
 
 
 .input {
-    width: 448px;
+    width: 370px;
+    
+    @media screen and (min-width: 1200px) {
+        width: 448px;
+    }
     height: 40px;
     border: none; 
     border-radius: 4px;
@@ -168,8 +172,16 @@ input:focus {
 }
 
 .conditions-link{
-    font-size: 14px;
-    line-height: 1.71em;
+    
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.71em;
+    }
+
+    font-size: 12px;
+    line-height: 1.17em;
+    letter-spacing: 0.03em;
+    color: $subfont-color;
     letter-spacing: 0.03em;
     color: $main-theme-color;
     text-decoration: none;
@@ -194,8 +206,14 @@ input:focus {
 }
 
 .ckeckbox-subscr{
-    font-size: 14px;
-    line-height: 1.71em;
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.71em;
+    }
+
+    font-size: 12px;
+    line-height: 1.17em;
     letter-spacing: 0.03em;
     color: $subfont-color;
 }

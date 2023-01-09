@@ -1,27 +1,28 @@
 header {    
     border-bottom: 1px solid $header-bottom-line;    
     width: 480px;
+    
+    padding-top: 15px;
+    padding-bottom: 15px;
 
-    @media screen and (min-width: 481px) {
+    @media screen and (min-width: 480px) {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 1200px) {
         width: 100%;
     }
 
 }
 
 .page-header { 
+    margin-right: auto;
+    margin-left: auto;  
 
     & .container {
         position: relative;
         display:flex;
-        align-items:center;
-        width: 100%;
-
-        @media screen and (max-width: 1600px) {
-        padding-top: 15px;
-        padding-bottom: 15px;
-        }
-        
-        
+        align-items:center;                  
     }
   
     &__menu {
@@ -90,7 +91,7 @@ header {
     
     &::after {
         position: absolute;
-        top: 71px;
+        top: 70px;
         left: 0;
         display: inline-block;
         content: "";
@@ -98,6 +99,10 @@ header {
         height: 4px;
         border-radius:2px;
         background-color: $main-theme-color;
+
+        @media screen and (min-width: 1200px) {
+            top: 65px;
+        }
     }
 }
 
@@ -129,12 +134,7 @@ header {
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
                     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         fill: $subfont-color;
-
-        @media screen and (min-width: 1600px) {
-            padding-top: 30px;
-            padding-bottom: 30px;
-        }
-        
+       
 
         &:hover,
         &:focus{
@@ -170,6 +170,7 @@ header {
     padding-top: 48px;
     padding-left: 40px;
     padding-bottom: 48px;
+    z-index: 10;
 
     &__pages {
         display: flex;
@@ -210,6 +211,12 @@ header {
     }
 }
 
+.phone-menu__button{
+    &:hover .phone-menu__icon{
+        fill: $main-theme-color;
+    }
+}
+
 .is-hidden {
     display: none;
 }
@@ -224,9 +231,11 @@ header {
     font-size: 24px;
     color: $subfont-color; 
 
+    
     &__link {
 
-        text-decoration: none; 
+        color: $subfont-color;
+        
 
         :hover {
             cursor: pointer;
