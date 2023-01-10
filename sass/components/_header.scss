@@ -1,19 +1,19 @@
 header {    
     border-bottom: 1px solid $header-bottom-line;    
     width: 100%;
-    
-    padding-top: 15px;
-    padding-bottom: 15px;
+    height: 80px;  
 }
 
 .page-header { 
     margin-right: auto;
-    margin-left: auto;  
+    margin-left: auto;     
+    padding-top: 24px; 
 
     & .container {
         position: relative;
         display:flex;
-        align-items:center;                  
+        align-items:center;
+                       
     }
   
     &__menu {
@@ -82,7 +82,7 @@ header {
     
     &::after {
         position: absolute;
-        top: 70px;
+        top: 68px;
         left: 0;
         display: inline-block;
         content: "";
@@ -92,7 +92,7 @@ header {
         background-color: $main-theme-color;
 
         @media screen and (min-width: 1200px) {
-            top: 65px;
+            top: 74px;
         }
     }
 }
@@ -152,11 +152,11 @@ header {
 .phone-menu {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    height: 796px;
+    height: 100%;
     background-color: $main-body-color;
     padding-top: 48px;
     padding-left: 40px;
@@ -173,18 +173,25 @@ header {
 
     &__link {
         color: $main-font-color;
+        font-weight: $irregular-font-weight;
     }
 
     &__socials {
         display: flex;
-        gap: 20px;
+        flex-wrap: wrap;
+        gap: 10px;
         font-size: 18px;
         line-height: 1.22;
-        color: $main-theme-color;
+        color: $main-theme-color;  
+                
     }
 
     &__ref {
         color: $main-theme-color;
+        padding-right: 10px;
+        border-right: 1px solid $link-devider;
+
+        
     }
 
     &__button {
@@ -195,11 +202,7 @@ header {
         border: none;
         background-color: inherit;
     }
-       
-    
-    @media screen and (min-width: 480px) {
-        width: 480px;        
-    }
+           
 }
 
 .phone-menu__button{

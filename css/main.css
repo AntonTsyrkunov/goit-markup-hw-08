@@ -88,13 +88,13 @@ ul {
 header {
   border-bottom: 1px solid #ECECEC;
   width: 100%;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  height: 80px;
 }
 
 .page-header {
   margin-right: auto;
   margin-left: auto;
+  padding-top: 24px;
 }
 .page-header .container {
   position: relative;
@@ -161,7 +161,7 @@ header {
 }
 .active::after {
   position: absolute;
-  top: 70px;
+  top: 68px;
   left: 0;
   display: inline-block;
   content: "";
@@ -172,7 +172,7 @@ header {
 }
 @media screen and (min-width: 1200px) {
   .active::after {
-    top: 65px;
+    top: 74px;
   }
 }
 
@@ -222,11 +222,11 @@ header {
 .phone-menu {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  height: 796px;
+  height: 100%;
   background-color: #FFFFFF;
   padding-top: 48px;
   padding-left: 40px;
@@ -241,16 +241,20 @@ header {
 }
 .phone-menu__link {
   color: #212121;
+  font-weight: 500;
 }
 .phone-menu__socials {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
   font-size: 18px;
   line-height: 1.22;
   color: #2196F3;
 }
 .phone-menu__ref {
   color: #2196F3;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 .phone-menu__button {
   position: absolute;
@@ -259,11 +263,6 @@ header {
   padding: 0;
   border: none;
   background-color: inherit;
-}
-@media screen and (min-width: 480px) {
-  .phone-menu {
-    width: 480px;
-  }
 }
 
 .phone-menu__button:hover .phone-menu__icon {
@@ -465,7 +464,6 @@ header {
 
 .examples {
   padding-top: 0;
-  padding-bottom: 0;
 }
 @media screen and (max-width: 1199.98px) {
   .examples {
@@ -513,11 +511,6 @@ header {
   margin-right: auto;
   margin-left: auto;
 }
-@media screen and (min-width: 768px) {
-  .section--team {
-    width: 768px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .section--team {
     width: 100%;
@@ -535,10 +528,13 @@ header {
 
 .members {
   padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .members {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
   }
@@ -551,6 +547,7 @@ header {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   max-width: 480px;
   margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .member {
@@ -561,7 +558,6 @@ header {
 @media screen and (min-width: 1200px) {
   .member {
     width: calc((100% - 90px) / 4);
-    padding-bottom: 30px;
   }
 }
 .member__pic {
@@ -667,6 +663,22 @@ header {
   min-width: 230px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .footer-tablet-desktop {
+    justify-content: space-between;
+    display: flex;
+    align-items: baseline;
+    padding-right: 74px;
+    padding-left: 71px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-tablet-desktop {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
 .info {
   text-align: center;
 }
@@ -766,7 +778,6 @@ header {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    padding-right: 73px;
   }
 }
 
@@ -782,7 +793,7 @@ header {
 }
 .footer-form__input {
   margin-top: 20px;
-  width: 450px;
+  width: 100%;
   height: 50px;
   padding: 15px 16px;
   background-color: #2F303A;
@@ -794,6 +805,11 @@ header {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #FFFFFF;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 480px) {
+  .footer-form__input {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-form__input {

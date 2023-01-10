@@ -15,6 +15,22 @@
 
 }
 
+.footer-tablet-desktop {
+    
+    @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+       justify-content: space-between;
+       display: flex;
+        align-items: baseline;
+        padding-right: 74px;
+        padding-left: 71px;
+    }
+
+    @media screen and (min-width: 1200px){
+         display: flex;
+        align-items: baseline;
+    }
+}
+
 .info {
     text-align: center;
 
