@@ -273,27 +273,53 @@
                 
                 <ul class="examples__list">
 
-                    <li class="examples__item"> 
-                        <img src="./images/box1.jpg" alt="Web-code typing" width="370" class="examples__pic">
-                        <div class="examples__overlay">
-                            <p class="examples__descr">Десктопні додатки</p>
-                        </div>
-                    </li>
+                    
+                        <li class="examples__item"> 
+                            <picture>
+                                <img 
+                                scrset="./images/we_do/wedooing1@1x.jpg 1x, ./images/we_do/wedooing1@2x.jpg 2x"
+                                src="./images/we_do/wedooing1@1x.jpg" 
+                                alt="Web-code typing" 
+                                width="370" 
+                                height="294"
+                                class="examples__pic">
+                                <div class="examples__overlay">
+                                    <p class="examples__descr">Десктопні додатки</p>
+                                </div>
+                            </picture>                            
+                        </li>
+                                      
         
                     <li class="examples__item">         
-                        <img src="./images/box2.jpg" alt="divices design arrangement" width="370" class="examples__pic"> 
-
-                        <div class="examples__overlay">
-                            <p class="examples__descr">Мобільні додатки</p>
-                        </div>          
+                        <picture>
+                            <img 
+                            scrset="./images/we_do/wedooing2@1x.jpg 1x, ./images/we_do/wedooing2@2x.jpg 2x"
+                            src="./images/we_do/wedooing2@1x.jpg" 
+                            alt="Web-code typing" 
+                            width="370" 
+                            height="294"
+                            class="examples__pic">
+                            <div class="examples__overlay">
+                                <p class="examples__descr">Десктопні додатки</p>
+                            </div>
+                        </picture>            
                     </li>
-        
+                    
                     <li class="examples__item">
-                        <img src="./images/box3.jpg" alt="colors palet choosing" width="370" class="examples__pic">
-
-                        <div class="examples__overlay">
-                            <p class="examples__descr">Дизайнерські рішення</p>
-                        </div>
+                        <picture>
+                            <picture>
+                                <img 
+                                scrset="./images/we_do/wedooing3@1x.jpg 1x, ./images/we_do/wedooing3@2x.jpg 2x"
+                                src="./images/we_do/wedooing3@1x.jpg" 
+                                alt="Web-code typing" 
+                                width="370" 
+                                height="294"
+                                class="examples__pic">
+                                <div class="examples__overlay">
+                                    <p class="examples__descr">Десктопні додатки</p>
+                                </div>
+                            </picture>    
+                        </picture>                        
                     </li>
                         
                 </ul>
@@ -311,12 +337,33 @@
 
                     <li class="member">
 
-                        <img 
-                        srcset="./images/product_designer@1x.jpg 450w, 
-                                ./images/product_designer@2x.jpg 900w"
-                        src="./images/product_designer@1x.jpg" 
-                        alt="Product designer's photo"                         
-                        class="member__pic">
+                        <picture>
+                            <!-- Для десктопа -->
+                            <source media="(min-width: 1200px)"
+                            srcset="
+                                    ./images/team/member1_desktop@1x.jpg 1x
+                                    ./images/team/member1_desktop@2x.jpg 2x"
+                                    type="image/jpg"/>
+                            <!-- Для планшета -->
+                            <source media="(min-width: 768px)"  
+                                 
+                            srcset="
+                                    ./images/team/member1_tablet@1x.jpg 1x
+                                    ./images/team/member1_teblet@2x.jpg 2x"
+                                    type="image/jpg"/>   
+                            <!-- Для смартфона -->
+                            <source media="(max-width: 767px)"  
+                                 
+                            srcset="
+                                    ./images/team/member1_mobile@1x.jpg 1x
+                                    ./images/team/member1_mobile@2x.jpg 2x"
+                            type="image/jpg"/> 
+                            <img                             
+                            src="./images/team/member1_mobile@1x.jpg" 
+                            alt="Marketologist photo" 
+                            class="member__pic">
+                        </picture>  
+
                         <div class="member__data">
                             <h3 class="member__name">Ігор Дем'яненко</h3>
                             <p class="member__position">Product Designer</p>                          
@@ -360,12 +407,32 @@
                     </li>
 
                     <li class="member">
-                        <img 
-                        srcset="./images/frontend-developer@1x.jpg 450w, 
-                                ./images/frontend-developer@2x.jpg 900w"
-                        src="./images/frontend-developer@1x.jpg" 
-                        alt="Front-end developer's photo" 
-                        class="member__pic">
+                       <picture>
+                            <!-- Для десктопа -->
+                            <source media="(min-width: 1200px)"
+                            srcset="
+                                    ./images/team/member2_desktop@1x.jpg 1x
+                                    ./images/team/member2_desktop@2x.jpg 2x"
+                                    type="image/jpg"/>
+                            <!-- Для планшета -->
+                            <source media="(min-width: 768px)"  
+                                 
+                            srcset="
+                                    ./images/team/member2_tablet@1x.jpg 1x
+                                    ./images/team/member2_teblet@2x.jpg 2x"
+                                    type="image/jpg"/>   
+                            <!-- Для смартфона -->
+                            <source media="(max-width: 767px)"  
+                                 
+                            srcset="
+                                    ./images/team/member2_mobile@1x.jpg 1x
+                                    ./images/team/member2_mobile@2x.jpg 2x"
+                            type="image/jpg"/> 
+                            <img                             
+                            src="./images/team/member2_mobile@1x.jpg" 
+                            alt="Marketologist photo" 
+                            class="member__pic">
+                        </picture>              
                         <div class="member__data">
                             <h3 class="member__name">Ольга Рєпіна</h3>
                             <p class="member__position">Frontend Developer</p>                          
@@ -409,11 +476,32 @@
                     </li>
                  
                     <li class="member">
-                        <img 
-                        srcset="./images/marketologist@1x.jpg 1x, ./images/marketologist@2x.jpg 2x"
-                        src="./images/marketologist@1x.jpg" 
-                        alt="Marketologist photo" 
-                        class="member__pic">
+                        <picture>
+                            <!-- Для десктопа -->
+                            <source media="(min-width: 1200px)"
+                            srcset="
+                                    ./images/team/member3_desktop@1x.jpg 1x
+                                    ./images/team/member3_desktop@2x.jpg 2x"
+                                    type="image/jpg"/>
+                            <!-- Для планшета -->
+                            <source media="(min-width: 768px)"  
+                                 
+                            srcset="
+                                    ./images/team/member3_tablet@1x.jpg 1x
+                                    ./images/team/member3_teblet@2x.jpg 2x"
+                                    type="image/jpg"/>   
+                            <!-- Для смартфона -->
+                            <source media="(max-width: 767px)"  
+                                 
+                            srcset="
+                                    ./images/team/member3_mobile@1x.jpg 1x
+                                    ./images/team/member3_mobile@2x.jpg 2x"
+                            type="image/jpg"/> 
+                            <img                             
+                            src="./images/team/member3_mobile@1x.jpg" 
+                            alt="Marketologist photo" 
+                            class="member__pic">
+                        </picture>                        
                         <div class="member__data">
                             <h3 class="member__name">Микола Тарасов</h3>
                             <p class="member__position">Marketing</p>                          
@@ -458,11 +546,32 @@
 
                 
                     <li class="member">
-                        <img 
-                        srcset="./images/designer@1x.jpg 1x, ./images/designer@2x.jpg 2x"
-                        src="./images/designer@1x.jpg" 
-                        alt="Designer's photo" 
-                        class="member__pic">
+                        <picture>
+                            <!-- Для десктопа -->
+                            <source media="(min-width: 1200px)"
+                            srcset="
+                                    ./images/team/member4_desktop@1x.jpg 1x
+                                    ./images/team/member4_desktop@2x.jpg 2x"
+                                    type="image/jpg"/>
+                            <!-- Для планшета -->
+                            <source media="(min-width: 768px)"  
+                                 
+                            srcset="
+                                    ./images/team/member4_tablet@1x.jpg 1x
+                                    ./images/team/member4_teblet@2x.jpg 2x"
+                                    type="image/jpg"/>   
+                            <!-- Для смартфона -->
+                            <source media="(max-width: 767px)"  
+                                 
+                            srcset="
+                                    ./images/team/member4_mobile@1x.jpg 1x
+                                    ./images/team/member4_mobile@2x.jpg 2x"
+                            type="image/jpg"/> 
+                            <img                             
+                            src="./images/team/member4_mobile@1x.jpg" 
+                            alt="Marketologist photo" 
+                            class="member__pic">
+                        </picture>  
                         <div class="member__data">
                             <h3 class="member__name">Михайло Єрмаков</h3>
                             <p class="member__position">UI Designer</p>                          

@@ -1,5 +1,5 @@
 .section--hero{
-        width: 480px;
+        max-width: 480px;
         height: 400px; 
         padding-top: 0;
         padding-bottom: 0;
@@ -14,7 +14,7 @@
         }
 
         @media screen and (min-width: 768px) {
-            width: 768px;
+            max-width: 768px;
             height: 400px;
             background-image: linear-gradient(to right, $hero-gradient, $hero-gradient), url(../../images/hero768.jpg);
             background-size: 768px 400px; 
@@ -25,7 +25,7 @@
         }
 
         @media screen and (min-width: 1200px) {
-            width: 1600px;
+            max-width: 1600px;
             height: 600px;
             background-image: linear-gradient(to right, $hero-gradient, $hero-gradient), url(../../images/hero1200@1x.jpg);
             background-size: 1600px 600px;   
