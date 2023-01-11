@@ -53,9 +53,9 @@
                 </li>
             </ul>
             
-            <div class="phone-menu is-hidden " data-modal>
+            <div class="phone-menu is-closed" data-menu-container>
 
-                <button type="button" class="phone-menu__button" data-modal-close is-open>
+                <button type="button" class="phone-menu__button" data-close-menu>
                     <svg width="19" height="19" class="phone-menu__icon">
                         <use href="./images/icons.svg#close"></use>
                     </svg>
@@ -95,7 +95,7 @@
 
             </div>
 
-            <button type="button" class="page-header__menu" data-modal-open>
+            <button type="button" class="page-header__menu" data-open-menu>
                 <svg width="26" height="16">
                     <use href="./images/icons.svg#menu"></use>
                 </svg>
@@ -397,7 +397,25 @@
 
     </footer>
     
-    <script src="./js/modal.js"></script>
+    <script>
+        const refs = {
+          openModalBtn: document.querySelector("[data-open-menu]"),
+          closeModalBtn: document.querySelector("[data-close-menu]"),
+          modal: document.querySelector("[data-menu-container]"),
+        };
+      
+        refs.openModalBtn.addEventListener("click", toggleModal);
+        refs.closeModalBtn.addEventListener("click", toggleModal);
+        refs.modal.addEventListener("click", testModal);
+        function testModal() {
+          console.log("click occured")
+        }
+      
+        function toggleModal() {
+          refs.modal.classList.toggle("is-closed");
+        }
+        
+          </script>
             
 </body>
 </html>
