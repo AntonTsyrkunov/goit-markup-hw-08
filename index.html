@@ -55,9 +55,9 @@
                 </li>
             </ul>
             
-            <div class="phone-menu is-hidden " data-modal>
+            <div class="phone-menu is-closed" data-menu-container>
 
-                <button type="button" class="phone-menu__button" data-modal-close is-open>
+                <button type="button" class="phone-menu__button" data-close-menu>
                     <svg width="19" height="19" class="phone-menu__icon">
                         <use href="./images/icons.svg#close"></use>
                     </svg>
@@ -97,7 +97,7 @@
 
             </div>
 
-            <button type="button" class="page-header__menu" data-modal-open>
+            <button type="button" class="page-header__menu" data-open-menu>
                 <svg width="26" height="16">
                     <use href="./images/icons.svg#menu"></use>
                 </svg>
@@ -114,15 +114,15 @@
                 <div class="container hero">
                    
                     <h1 class="hero__heading"> Ефективні рішення для вашого бізнесу</h1>
-                    <button  form-modal-open  type="button" class="hero__button"> Замовити послугу</button>
+                    <button  data-modal-open  type="button" class="hero__button"> Замовити послугу</button>
                 </div>
 
-                <div form-modal class="backdrop is-hidden">
+                <div data-modal class="backdrop is-hidden">
 
 
                                 
                     <div class="modal-field modal">
-                        <button form-modal-close type="button" class="modal__close">
+                        <button data-modal-close type="button" class="modal__close">
 
                             <svg width="11" height="11" class="modal__close-icon">
                                 <use href="./images/icons.svg#cross"></use>
@@ -190,7 +190,7 @@
                                     type="checkbox"
                                     name="argeement">
                                     <span class="checkbox-icon"></span>
-                                    <span class="ckeckbox-subscr" >Погоджуюся з розсилкою та приймаю</span><a href="#" class="conditions-link"> Умови договору </a> 
+                                    <span class="ckeckbox-subscr" >Погоджуюся з розсилкою та приймаю <a href="#" class="conditions-link"> Умови договору </a></span> 
                                 </label>
                             </div>
 
@@ -765,10 +765,28 @@
         
 
     </footer>
+    <script>
+  const refs = {
+    openModalBtn: document.querySelector("[data-open-menu]"),
+    closeModalBtn: document.querySelector("[data-close-menu]"),
+    modal: document.querySelector("[data-menu-container]"),
+  };
 
+  refs.openModalBtn.addEventListener("click", toggleModal);
+  refs.closeModalBtn.addEventListener("click", toggleModal);
+  refs.modal.addEventListener("click", testModal);
+  function testModal() {
+    console.log("click occured")
+  }
 
+  function toggleModal() {
+    refs.modal.classList.toggle("is-closed");
+  }
+  
+    </script>
+    <!-- <script scr="./js/menu.js"></script> -->
 
 <script src="./js/modal.js"></script>
-<!-- <script scr="./js/menu.js"></script> -->
+
 </body>
 </html> 
